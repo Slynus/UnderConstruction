@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Shared variables */
+
+body {
+    --cc-border-color: #02006e;
+    --cc-text-color: #02006e;
+    --cs-border-size: 2px;
+}
+
+/* Background image effects */
+
+.bg-holder {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url("media/velo.jpg");
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+
+}
+
+/* Main Layout */
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10rem;
+}
+
+.title {
+    margin: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.credit {
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+/* Profile card */
+
+.profile-picture{
+    border-radius: 100%;
+    border: solid var(--cc-border-color) var(--cs-border-size);
+    width: 200px;
+}
+
+.social-badges {
+    width: 32px;
+    position: relative;
+    top: 1rem;
+}
+
+/* Police & Text */
+
+.text-style-1 {
+    font-size: 7rem;
+    font-weight: 400;
+    color: var(--cc-text-color);
+    font-family: 'Libre Baskerville', serif;
+}
+
+.text-style-2 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--cc-border-color);
+    font-family: 'Libre Baskerville', serif;
+}
+
+.text-style-3 {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Responsives media querys */
+
+@media only screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: initial;
+        justify-content: flex-start;
+    }
+
+    .bg-holder{
+        height: auto;
+    }
+    .text-style-1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .text-style-2 {
+        font-size: 1.42rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .text-style-1 {
+        font-size: 2rem;
+    }
+
+    .text-style-2 {
+        font-size: 0.8rem;
+    }
+}
