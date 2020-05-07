@@ -23,7 +23,7 @@ body {
     background-image: url("media/velo.jpg");
     width: 100vw;
     height: 100vh;
-    overflow: scroll;
+    /* overflow: hidden; */
     display: flex;
 
 }
@@ -105,6 +105,7 @@ main {
     .bg-holder{
         height: auto;
     }
+
     .text-style-1 {
         font-size: 5rem;
         text-align: center;
@@ -125,3 +126,13 @@ main {
         font-size: 0.8rem;
     }
 }
+
+@media only screen and (max-height: 550px){
+    .bg-holder{
+        overflow: scroll;    
+    }
+    main {
+        padding-top: initial;
+    }
+}
+
