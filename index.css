@@ -61,6 +61,7 @@ main {
     border-radius: 100%;
     border: solid var(--cc-border-color) var(--cs-border-size);
     width: 200px;
+    height: 200px;
 }
 
 .social-badges {
